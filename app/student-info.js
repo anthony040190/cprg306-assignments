@@ -26,7 +26,7 @@ export default function StudentInfo() {
 
             <div className="flex py-1">
                 <div className="w-1/2 text-right pr-3">
-                    <label>Course and section:</label>
+                    <label>Course and Section:</label>
                 </div>
 
                 <div className="w-1/2 text-left pl-3">
