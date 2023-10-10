@@ -48,8 +48,8 @@ export default function NewItem() {
                 <div className="mb-2 flex justify-between">
                     <input type="number" value={quantity} onChange={handleQuantityChange} min="1" max="99" className="shadow appearance-none border rounded-lg w-1/4 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
                     <select onChange={handleCategoryChange} className="shadow appearance-none border rounded-lg w-2/4 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-                    <option disabled>Category</option>
-                        <option value='Produce' selected>Produce</option>
+                        <option disabled>Category</option>
+                        <option defaultValue={'Produce'}>Produce</option>
                         <option value="Dairy">Dairy</option>
                         <option value="Bakery">Bakery</option>
                         <option value="Meat">Meat</option>
