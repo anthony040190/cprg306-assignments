@@ -10,6 +10,7 @@ export default function Home() {
         <p className='py-1'><Link href="/week2/">Week 2</Link></p>
         <p className='py-1'><Link href="/week3/">Week 3</Link></p>
         <p className='py-1'><Link href="/week4/">Week 4</Link></p>
+        <p className='py-1'><Link href="/week5/">Week 5</Link></p>
       </div>
     </div>    
   );
