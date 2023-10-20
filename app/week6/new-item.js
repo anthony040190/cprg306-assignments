@@ -9,7 +9,6 @@ export default function NewItem({ onAddItem }) {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-
         const item = {
             name: name,
             quantity: quantity,
@@ -37,17 +36,17 @@ export default function NewItem({ onAddItem }) {
     }
 
     return (
-        <div className="flex w-full mt-10">
-            <form onSubmit={handleSubmit} className="rounded pb-6 mb-4 max-w-md">
-                <div className="mb-2">
+        <div className="flex w-3/12 mt-5">
+            <form onSubmit={handleSubmit} className="rounded pb-6 w-full">
+                <div className="mb-3">
                     <input type="text" value={name} onChange={handleNameChange} required className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Item Name" />
                 </div>
 
-                <div className="mb-2 flex justify-between">
+                <div className="mb-3 flex justify-between">
                     <input type="number" value={quantity} onChange={handleQuantityChange} min="1" max="99" className="shadow appearance-none border rounded-lg w-1/4 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
                     <select onChange={handleCategoryChange} className="shadow appearance-none border rounded-lg w-2/4 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                         <option disabled>Category</option>
-                        <option defaultValue={'Produce'}>Produce</option>
+                        <option value="Produce" selected>Produce</option>
                         <option value="Dairy">Dairy</option>
                         <option value="Bakery">Bakery</option>
                         <option value="Meat">Meat</option>

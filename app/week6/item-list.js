@@ -20,12 +20,19 @@ export default function ItemList({ items }) {
     const sortedItems = (sortBy === "name") ? items.sort((a, b) => a.name.localeCompare(b.name) ) : items.sort((a, b) =>  a.category.localeCompare(b.category));
 
     return (
-        <div>
-            <div className="flex gap-4">
-                <label>Sort By:</label>
-                <button className="bg-blue-500 w-20 p-1 focus:bg-green-500 rounded" onClick={handleSortByName}>Name</button>
-                <button className="bg-blue-500 w-20 p-1 focus:bg-green-500 rounded" onClick={handleSortByCategory}>Category</button>
-                {/* <button className="bg-blue-500 w-20 p-1 focus:bg-green-500 rounded" onClick={handleSortByGroup}>Group by Category</button> */}
+        <div className="w-3/12">
+            <div className="flex gap-3">
+                <div className="w-2/12 p-1">
+                    <p>Sort By:</p>
+                </div>
+                
+                <div className="w-5/12">
+                    <button className="bg-blue-500 w-full p-1 focus:bg-green-500 rounded" onClick={handleSortByName}>Name</button>
+                </div>
+                
+                <div className="w-5/12">
+                    <button className="bg-blue-500 w-full p-1 focus:bg-green-500 rounded" onClick={handleSortByCategory}>Category</button>
+                </div>
             </div>
 
             {
