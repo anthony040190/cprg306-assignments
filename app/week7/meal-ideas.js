@@ -6,8 +6,10 @@ export default function MealIdeas({ ingredient }) {
     const [selectedMealImage, setSelectedMealImage] = useState(null);
 
     const loadMealIdeas = async () => {
-        const data = await fetchMealIdeas(ingredient);
-        setMeals(data);
+        if(ingredient !== "") {
+            const data = await fetchMealIdeas(ingredient);
+            setMeals(data);
+        }
     }
 
     useEffect(() => {
@@ -56,7 +58,6 @@ const fetchMealIdeas = async (ingredient) => {
     } catch(e) {
         console.error("Cannot access the provided link ", e);
     }
-
 }
 
 

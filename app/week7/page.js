@@ -22,7 +22,7 @@ export default function Page() {
 
     return (
         <main className="mx-4">
-            <h1 className="text-3xl font-bold my-4">Shopping List </h1>
+            <h1 className="text-3xl font-bold my-4">Shopping List</h1>
             <div className="flex flex-row gap-4">
                 <div className="basis-1/4">
                     <NewItem onAddItem={handleAddItem} />
