@@ -22,16 +22,17 @@ export default function Page() {
 
     return (
         <main className="mx-4">
-            <h1 className="text-3xl font-bold my-4">Shopping List</h1>
+            <h1 className="text-3xl font-bold my-4">Shopping List </h1>
             <div className="flex flex-row gap-4">
                 <div className="basis-1/4">
                     <NewItem onAddItem={handleAddItem} />
                     <ItemList items={items} onItemSelect={handleItemSelect} />
                 </div>
-
+                
                 <div className="basis-1/4">
                     <MealIdeas ingredient={selectedItemName} />
                 </div>
+                
             </div>
         </main>
     );
